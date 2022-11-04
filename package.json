@@ -1,0 +1,28 @@
+{
+  "name": "servergraduate",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/server",
+    "dev": "nodemon ./bin/server",
+    "engines": {
+      "node": "18.11.0"
+    }
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.3",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "joi": "^17.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.1",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.20",
+    "randombytes": "^2.1.0",
+    "redis": "^4.4.0"
+  }
+}
