@@ -1,6 +1,6 @@
 var express = require("express");
+var axios = require("axios");
 var router = express.Router();
-import axios from "axios";
 
 const Redis = require(`redis`);
 
