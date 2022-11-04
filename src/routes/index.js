@@ -15,7 +15,7 @@ router.get("/photos", async (req, res, next) => {
     { params: albumID }
   );
 
-  res.render("index", { title: data });
+  res.render("index", { title: JSON.stringify(data) });
 });
 
 module.exports = router;
