@@ -4,9 +4,13 @@ const router = express.Router();
 
 router.get("/auth-logout", (req, res, next) => {
   res.render(`login`, { title:"namvt",
-  home: navigation.HOME ,
-  login: navigation.LOGIN,
-  logout: navigation.LOGOUT ,
-});
+    home: navigation.HOME,
+    login: navigation.LOGIN,
+    logout: navigation.LOGOUT,
+    chart: navigation.CHART,
+    register: navigation.REGISTER,
+    analystic: navigation.ANALYSTIC,
+    data_table: navigation.DATATABLE,
+  });
 });
 module.exports = router;
