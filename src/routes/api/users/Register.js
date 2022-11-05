@@ -1,5 +1,5 @@
 const express = require(`express`);
-const navigation = require("../../../../utils/client-web/Navigation");
+const navigation = require("../../../utils/client-web/Navigation");
 const router = express.Router();
 
 router.get("/register", (req, res, next) => {
