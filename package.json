@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./bin/server",
     "dev": "nodemon ./bin/server",
-     "build": "npm run build",
+     "build": "npm run start",
     "engines": {
       "node": "18.11.0"
     }
