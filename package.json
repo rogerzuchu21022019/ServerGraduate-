@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node ./bin/server",
     "dev": "nodemon ./bin/server",
+    "build": "yarn start",
     "engines": {
       "node": "18.11.0"
     }

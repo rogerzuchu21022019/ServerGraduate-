@@ -1,0 +1,78 @@
+###
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+    "email" : "namios123@gmail.com",
+    "password" : "123456",
+    "phone" : "0879175310",
+    "address" : "Q12",
+    "name" : "Namzuchu",
+
+}
+###
+POST http://localhost:3000/api/v1/login
+Content-Type: application/json
+
+{
+    "email" : "namios123@gmail.com",
+    "password" : "123456"
+}
+
+
+###
+GET http://localhost:3000/api/v1/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MzM3YjUzODE0YjNhOTU2YmM1NTBkODUiLCJpYXQiOjE2NjQ2MzQ1NzMsImV4cCI6MTY2NDYzODE3M30.yGkXVA0UaFsIwPOAMXZm2p404-TjB8NZ1AqQJAHziFU
+
+
+
+# POST http://localhost:3000/api/v1/register
+# Content-Type: application/json; charset=utf-8
+
+# {
+#     "email":"vtnam@gmail.com",
+#     "password":"123456"
+# }
+
+
+POST http://localhost:3000/api/v1/register
+Content-Type: application/json; charset=utf-8
+
+{
+    "email":"namvvvv@gmail.com",
+    "password":"123456"
+}
+
+
+###
+POST http://localhost:3000/api/v1/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MzM5MDYwNGI5MjZlMmE1ZjM4NTJkZjMiLCJpYXQiOjE2NjQ2ODQ5NDIsImV4cCI6MTY2NzI3Njk0Mn0.8U_PaRV71NZexevrgKoVU1FuVRo6OjSe_wMGDoDCgYc"
+}
+
+###
+POST http://localhost:3000/api/v1/login
+Content-Type: application/json; charset=utf-8
+
+{
+    "email":"vtnam@gmail.com",
+    "password":"123456"
+}
+
+###
+GET  http://localhost:3000/api/v1/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MzM2ZDZkMjI3NjkzOTM0ZDQxZmFkZmUiLCJpYXQiOjE2NjQ2MDc2MDUsImV4cCI6MTY2NDYwNzYyNX0.VK8PH4xvCcAv14jRG6jnF6iC0-v1lv5DTCblRy55ASk
+
+
+### 
+POST http://localhost:3000/api/v1/logout
+Content-Type: application/json; charset=utf-8
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MzM2ZDZkMjI3NjkzOTM0ZDQxZmFkZmUiLCJpYXQiOjE2NjQ2MDc1ODksImV4cCI6MTY2NzE5OTU4OX0.MO-e8lgKwcbKkxYY-OpycZnsPZB-IpCZ9us-Ui1jLlg"
+}
+
+###
+GET http://localhost:3000/api/v1/home
