@@ -1,6 +1,6 @@
 const home = require("./products/Home");
 const chart = require("./products/Chart");
-const dataTable = require("./products/Data-table");
+const dataTable = require("./products/DataTable");
 const analystic = require("./products/Analystic");
 const add = require("./products/AddProduct");
 const findAll = require("./products/FindAllProduct");
