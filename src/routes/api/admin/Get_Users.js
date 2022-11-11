@@ -1,11 +1,11 @@
 var express = require("express");
 const Get_Users_Controller = require("../../../components/admin/admin_controller/Get_Users_Controller");
 var router = express.Router();
-
+require(`dotenv`).config()
 const Redis = require(`ioredis`);
 const redis = new Redis({
-  port: "6379",
-  host: "127.0.0.1",
+  port: process.env.PORT_REDIS,
+  host: process.env.HOST_REDIS
 });
 
 router.get("/get-users", async (req, res, next) => {

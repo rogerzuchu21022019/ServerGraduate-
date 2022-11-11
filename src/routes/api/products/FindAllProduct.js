@@ -4,10 +4,11 @@ const router = express.Router();
 const Redis = require(`ioredis`);
 const VerifyTokenMiddleware = require("../../../middlewares/VerifyToken");
 const VerifyToken = require("../../../middlewares/VerifyToken");
+require("dotenv").config();
 
 const redis = new Redis({
-  port: 6379,
-  host: `127.0.0.1`,
+  port: process.env.PORT_REDIS,
+  host: process.env.HOST_REDIS,
 });
 
 router.get(`/`,VerifyToken, async (req, res) => {

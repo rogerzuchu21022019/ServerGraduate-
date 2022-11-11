@@ -2,12 +2,13 @@ const express = require("express");
 const FindByIDController = require("../../../components/products/controller/FindByID");
 const VerifyTokenMiddleware = require("../../../middlewares/VerifyToken");
 const router = express.Router();
+require("dotenv").config();
 
 const Redis = require(`ioredis`);
 const { RedisHelper } = require("../../../utils/server/RedisHelper");
 const redis = new Redis({
-  port: 6379,
-  host: "127.0.0.1",
+  port: process.env.PORT_REDIS,
+  host: process.env.HOST_REDIS,
 });
 
 router.get("/:productID", VerifyTokenMiddleware, async (req, res) => {
