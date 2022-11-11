@@ -16,13 +16,13 @@ const WebManagerRouter = (app, fixPublic) => {
 
   app.use(MAIN, RouteUser.login, fixPublic);
   app.use(MAIN, RouteUser.logout, fixPublic);
-  app.use(SUB_USERS, RouteUser.registert, fixPublic);
+  app.use(SUB_USERS, RouteUser.register, fixPublic);
 
   /* Products */
   app.use(MAIN, RouteProduct.home, fixPublic);
   app.use(SUB_PRODUCTS, RouteProduct.analystic, fixPublic);
   app.use(SUB_PRODUCTS, RouteProduct.chart, fixPublic);
-  app.use(SUB_PRODUCTS, RouteProduct.dataRouter, fixPublic);
+  app.use(SUB_PRODUCTS, RouteProduct.dataTable, fixPublic);
 };
 
 module.exports = WebManagerRouter;
