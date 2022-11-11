@@ -1,5 +1,6 @@
 const ApiUser = require("../api/Api.User");
 const ApiProduct = require(`../api/Api.Product`);
+const ApiAdmin = require(`../api/Api_Admin`);
 
 const ManagerRouter = (app, fixPublic) => {
 
@@ -8,6 +9,13 @@ const ManagerRouter = (app, fixPublic) => {
   const PRODUCTS = "products";
   const SUB_USERS = `${MAIN}/${USERS}`; 
   const SUB_PRODUCTS = `${MAIN}/${PRODUCTS}`; 
+
+
+  app.use(MAIN, ApiAdmin.getUsers, fixPublic);
+  app.use(MAIN, ApiAdmin.getUser, fixPublic);
+  app.use(MAIN, ApiAdmin.updateUser, fixPublic);
+  app.use(MAIN, ApiAdmin.deleteUser, fixPublic);
+
   /* Users */
   app.use(MAIN, ApiUser.loginRouter, fixPublic);
   app.use(MAIN, ApiUser.logoutRouter, fixPublic);
