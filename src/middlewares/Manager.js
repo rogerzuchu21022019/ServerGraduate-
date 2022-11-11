@@ -6,7 +6,10 @@ const express = require("express");
 const session = require(`express-session`);
 const Redis = require(`ioredis`);
 const Redis_Store = require(`connect-redis`)(session);
-const redisClient = new Redis();
+const redisClient = new Redis({
+  port: process.env.PORT_REDIS,
+  host: process.env.HOST_REDIS,
+});
 const cors = require(`cors`);
 
 const ManagerMiddleware = (app) => {
