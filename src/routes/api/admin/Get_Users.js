@@ -22,7 +22,7 @@ router.get("/get-users", async (req, res, next) => {
         data: cacheRedis,
       });
     }
-
+    
     const result = await Get_Users_Controller();
     console.log(`Redis miss data, adding new data =>>>>>>>>>>>>>>>>`);
     await redis.set("users", JSON.stringify(result), "EX", 30);
