@@ -4,9 +4,9 @@ const logger = require("morgan");
 const bodyParser = require("body-parser");
 const express = require("express");
 const session = require(`express-session`);
-// const Redis = require(`ioredis`);
-// const Redis_Store = require(`connect-redis`)(session);
-// const redisClient = new Redis();
+const Redis = require(`ioredis`);
+const Redis_Store = require(`connect-redis`)(session);
+const redisClient = new Redis();
 const cors = require(`cors`);
 
 const ManagerMiddleware = (app) => {
