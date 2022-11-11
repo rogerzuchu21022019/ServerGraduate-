@@ -31,11 +31,13 @@ function newConnection(uri) {
 }
 
 /* URI lấy từ .env */
-const URI_MONGODB_ONL = process.env.URI_MONGODB_ONL;
+const URI_USER_MONGODB = process.env.URI_USER_MONGODB;
 const URI_PRODUCT_MONGODB = process.env.URI_PRODUCT_MONGODB;
 
+// const URI_USER_MONGODB = process.env.URI_MONGODB_ONL;
+// const userConnection = newConnection(URI_USER_MONGODB);
 /* Tạo connection */
-const userConnection = newConnection(URI_MONGODB_ONL);
+const userConnection = newConnection(URI_USER_MONGODB);
 const productConnection = newConnection(URI_PRODUCT_MONGODB);
 
 /* Export số lượng lớn connection */

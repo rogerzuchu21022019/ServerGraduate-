@@ -17,9 +17,9 @@ const ManagerRouter = (app, fixPublic) => {
   app.use(MAIN, ApiAdmin.deleteUser, fixPublic);
 
   /* Users */
-  app.use(MAIN, ApiUser.loginRouter, fixPublic);
-  app.use(MAIN, ApiUser.logoutRouter, fixPublic);
-  app.use(SUB_USERS, ApiUser.registerRouter, fixPublic);
+  app.use(MAIN, ApiUser.login, fixPublic);
+  app.use(MAIN, ApiUser.logout, fixPublic);
+  app.use(SUB_USERS, ApiUser.register, fixPublic);
 
   /* Products */
   app.use(MAIN, ApiProduct.home, fixPublic);

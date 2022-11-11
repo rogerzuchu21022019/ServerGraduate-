@@ -1,9 +1,9 @@
-const loginRouter = require("../api/users/auth/Login");
-const registerRouter = require("../api/users/Register");
-const logoutRouter = require("../api/users/auth/Logout");
+const login = require("../api/users/auth/Login");
+const register = require("../api/users/Register");
+const logout = require("../api/users/auth/Logout");
 
 module.exports = {
-  loginRouter,
-  logoutRouter,
-  registerRouter,
+  login,
+  logout,
+  register,
 };

@@ -1,16 +1,9 @@
-const express = require(`express`);
-const navigation = require("../../../../utils/client-web/Navigation");
-const router = express.Router();
+var express = require('express');
+var router = express.Router();
 
-router.get("/auth-logout", (req, res, next) => {
-  res.render(`login`, { title:"namvt",
-    home: navigation.HOME,
-    login: navigation.LOGIN,
-    logout: navigation.LOGOUT,
-    chart: navigation.CHART,
-    register: navigation.REGISTER,
-    analystic: navigation.ANALYSTIC,
-    data_table: navigation.DATATABLE,
-  });
+router.delete('/auth/logout', function(req, res, next) {
+  res.render('login')
 });
+
 module.exports = router;
+
