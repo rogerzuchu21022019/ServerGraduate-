@@ -22,10 +22,15 @@ const ManagerRouter = (app, fixPublic) => {
   app.use(SUB_USERS, ApiUser.registerRouter, fixPublic);
 
   /* Products */
-  app.use(MAIN, ApiProduct.homeRouter, fixPublic);
-  app.use(SUB_PRODUCTS, ApiProduct.analysticRouter, fixPublic);
-  app.use(SUB_PRODUCTS, ApiProduct.chartRouter, fixPublic);
-  app.use(SUB_PRODUCTS, ApiProduct.dataTableRouter, fixPublic);
+  app.use(MAIN, ApiProduct.home, fixPublic);
+  app.use(SUB_PRODUCTS, ApiProduct.analystic, fixPublic);
+  app.use(SUB_PRODUCTS, ApiProduct.chart, fixPublic);
+  app.use(SUB_PRODUCTS, ApiProduct.dataTable, fixPublic);
+
+  app.use(SUB_PRODUCTS, ApiProduct.add, fixPublic);
+  app.use(SUB_PRODUCTS, ApiProduct.findAll, fixPublic);
+  app.use(SUB_PRODUCTS, ApiProduct.findByID, fixPublic);
+  app.use(SUB_PRODUCTS, ApiProduct.search, fixPublic);
 };
 
 module.exports = ManagerRouter;

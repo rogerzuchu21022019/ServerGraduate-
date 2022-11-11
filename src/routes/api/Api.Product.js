@@ -1,10 +1,19 @@
-const homeRouter = require(`../api/products/Home`)
-const analysticRouter = require(`../api/products/Analystic`)
-const dataTableRouter = require(`../api/products/Data-Table`)
-const chartRouter = require(`../api/products/Chart`)
+const home = require("./products/Home");
+const chart = require("./products/Chart");
+const dataTable = require("./products/Data-table");
+const analystic = require("./products/Analystic");
+const add = require("./products/AddProduct");
+const findAll = require("./products/FindAllProduct");
+const findByID = require("./products/FindByID");
+const search = require("./products/Search");
+
 module.exports = {
-  homeRouter,
-  analysticRouter,
-  dataTableRouter,
-  chartRouter,
+  home,
+  chart,
+  dataTable,
+  analystic,
+  add,
+  findAll,
+  findByID,
+  search,
 };

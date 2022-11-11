@@ -1,7 +1,8 @@
-const express = require(`express`);
-const navigation = require("../../../utils/client-web/Navigation");
+const express = require("express");
 const router = express.Router();
-router.get("/home", (req, res, next) => {
+const navigation = require(`../../../utils/client-web/Navigation`);
+/* GET home page. */
+router.get("/home", function (req, res, next) {
   res.render("home", {
     home: navigation.HOME,
     login: navigation.LOGIN,
@@ -12,4 +13,5 @@ router.get("/home", (req, res, next) => {
     data_table: navigation.DATATABLE,
   });
 });
+
 module.exports = router;
