@@ -23,10 +23,10 @@ function newConnection(uri) {
   });
 
   /* Dùng SIGINT để đóng connect */
-  process.on('SIGINT',() => {
+  process.on("SIGINT", () => {
     connection.close();
-    process.exit(0)
-  })
+    process.exit(0);
+  });
   return connection;
 }
 
