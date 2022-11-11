@@ -20,14 +20,14 @@ const ManagerMiddleware = (app) => {
   app.use(bodyParser.json());
   app.use(cookieParser());
 
+  // store: new Redis_Store({ client: redisClient }),
   app.use(
-    // session({
-    //   secret: "keyboard cat",
-    //   store: new Redis_Store({ client: redisClient }),
-    //   resave: false,
-    //   saveUninitialized: true,
-    //   cookie: { secure: true, maxAge: 5 * 60 * 1000, httpOnly: true },
-    // })
+    session({
+      secret: "keyboard cat",
+      resave: false,
+      saveUninitialized: true,
+      cookie: { secure: true, maxAge: 5 * 60 * 1000, httpOnly: true },
+    })
   );
 
   const fixPublic = express.static(path.join(__dirname, "public"));
