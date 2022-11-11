@@ -43,5 +43,5 @@ const userConnection = newConnection(URI_MONGODB_ONL);
 /* Export số lượng lớn connection */
 module.exports = {
   userConnection,
-  productConnection,
+  // productConnection,
 };
