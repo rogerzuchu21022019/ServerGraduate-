@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 const express = require("express");
 const session = require(`express-session`);
 const Redis = require(`ioredis`);
+
+require("dotenv").config();
 const Redis_Store = require(`connect-redis`)(session);
 const redisClient = new Redis({
   port: process.env.PORT_REDIS,
